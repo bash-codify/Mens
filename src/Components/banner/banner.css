@@ -1,0 +1,15 @@
+
+
+
+.banneractive{
+    display: block;
+    transform: translateX(0);
+}
+.bannernext{
+    display: none;
+    transform: translateX(100%);
+}
+.bannerlast{
+    display: none;
+    transform: translateX(-100%);
+}

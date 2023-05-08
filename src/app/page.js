@@ -1,5 +1,5 @@
 
-import Banners from "@/Components/Banners";
+import HomePage from "@/Components/HomePage";
 
 
 export default  function Home() {
@@ -8,7 +8,7 @@ export default  function Home() {
   
   return (
     <main>
-    <Banners/>
+    <HomePage/>
     </main>
   )
 }

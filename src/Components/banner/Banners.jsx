@@ -1,8 +1,10 @@
 'use client'
-import React, { useEffect, useState, useRef} from "react";
-import { client, urlFor } from "../../lib/client";
+import React, { useEffect, useState} from "react";
+import { client, urlFor } from "../../../lib/client";
 import Image from "next/image";
 import { Icon } from '@iconify/react';
+
+import './banner.css'
 
 const NavDotButton = [
   
@@ -47,9 +49,14 @@ const Banners = () => {
 
 
   const getBanner = async () => {
-    const query = await client.fetch(`*[_type == "banner"]`);
-    const Querybanner = await query
-    setBanData(Querybanner)
+    try {
+      const query = await client.fetch(`*[_type == "banner"]`);
+      const Querybanner = await query
+      setBanData(Querybanner)
+
+    } catch (error) {
+      console.log(error);
+    }
 
   }
 
@@ -65,17 +72,18 @@ const Banners = () => {
         setCurrent(0)
       }
 
-  }, [current, bandata])
+  }, [current,bandata])
 
-  useEffect(()=>{
+  // useEffect(()=>{
     
-    setTimeout(()=>{
+  //   setTimeout(()=>{
       
-      setCurrent(current + 1)
+  //     setCurrent(current + 1)
 
-    },3000)
+  //   },5000)
 
-  }, [current])
+  // }, [current])
+
 
 
   return (
@@ -91,22 +99,29 @@ const Banners = () => {
               const image = item.image;
               const title = item.Desc;
               const button = item.ButtonText
+
+              let position = 'bannernext'
               
               if(index === current){
+                position = 'banneractive'
+              }
+              if(index === bandata.length - 1){
+                position = 'bannerlast'
+              }
 
                 return(
     
-                  <div className=" w-full h-full flex items-center justify-center" key={index}>
+                  <div className= {` ${position} w-full h-full flex items-center justify-center `}key={index}>
                     <div className=" relative w-full h-full">
-                      <Image src={urlFor(image).url()} unoptimized={true} width={2000} height={2000}  alt="hero banner" className=" w-full h-screen object-cover object-center  relative" />
+                      <Image src={urlFor(image).url()} unoptimized={true} width={2000} height={2000} priority alt="hero banner" className=" w-full h-screen object-cover object-center  relative" />
   
-                      <div className=" absolute botton-2/4 left-2/4 -mt-36 -translate-x-2/4  flex flex-col items-center justify-center gap-2 uppercase w-full">
-                        <div className=" text-2xl font-bold text-white bg-gray-500/40 backdrop-blur-3xl">
+                      <div className=" absolute botton-2/4 left-2/4 -mt-36 -translate-x-2/4  flex flex-col items-center justify-center gap-2 uppercase w-full md:items-end md:justify-center md:pr-12">
+                        <div className=" text-2xl font-bold text-red-600">
                           <h2>
                             {title}
                           </h2>
                         </div>
-                        <div className=" bg-white w-52 h-12 flex items-center justify-center font-semibold border border-gray-500">
+                        <div className=" bg-white w-52 h-12 flex items-center justify-center font-semibold border border-gray-500 cursor-pointer">
                           <button type="button">
                             {button}
                           </button>
@@ -120,7 +135,7 @@ const Banners = () => {
                           NavDotButton.map((dotItem, index)=>{
                             
                             return(
-                              <div className={`${index === current? 'text-white' : 'text-gray-600'} cursor-pointer`} key={index} onClick={()=> setCurrent(index)}>
+                              <div className={`${index === current? 'text-white' : 'text-gray-600'} cursor-pointer`} key={index} onClick={()=> setCurrent(index )}>
                                 <span>
                                   {dotItem.icon}
                                 </span>
@@ -135,7 +150,7 @@ const Banners = () => {
 
                   </div>
                 )
-              }
+              
             
             })
           }
