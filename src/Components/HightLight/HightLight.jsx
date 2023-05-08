@@ -27,6 +27,7 @@ const HightLight = () => {
       initialSlide: 0,
     //   nextArrow: <NextArrow/>,
     //   prevArrow: <PrevArrow/>,
+      arrows: false,
       autoplay: true,
       autoplaySpeed: 5000,
       responsive: [

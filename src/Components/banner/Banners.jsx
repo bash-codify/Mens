@@ -3,6 +3,7 @@ import React, { useEffect, useState} from "react";
 import { client, urlFor } from "../../../lib/client";
 import Image from "next/image";
 import { Icon } from '@iconify/react';
+import Slider from "react-slick";
 
 import './banner.css'
 
@@ -37,14 +38,17 @@ const Banners = () => {
   const [current, setCurrent] = useState(0);
 
 
-  // const slideIndex = (index)=>{
-  //   if(index === current){
-  //     return setCuurent(index)
-  //   }
+const settings = {
 
-  //   setCuurent(index)
-
-  // }
+      // dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      arrows:false,
+    };
 
 
 
@@ -61,37 +65,18 @@ const Banners = () => {
   }
 
   useEffect(()=>{
-    
     getBanner()
-
-  }, [bandata])
-
-  useEffect(()=>{
-    
-      if(current > bandata.length - 1){
-        setCurrent(0)
-      }
-
-  }, [current,bandata])
-
-  // useEffect(()=>{
-    
-  //   setTimeout(()=>{
-      
-  //     setCurrent(current + 1)
-
-  //   },5000)
-
-  // }, [current])
+  },[bandata])
 
 
 
   return (
+
     <>
     <section className=" w-full min-h-h90">
       <article className=" sm:w-w95 m-auto">
         
-        <div className=" relative w-full h-full flex items-center justify-center">
+        <Slider {...settings} className=" overflow-hidden -z-50">
 
           {
             bandata.map((item, index)=> {
@@ -100,18 +85,9 @@ const Banners = () => {
               const title = item.Desc;
               const button = item.ButtonText
 
-              let position = 'bannernext'
-              
-              if(index === current){
-                position = 'banneractive'
-              }
-              if(index === bandata.length - 1){
-                position = 'bannerlast'
-              }
-
                 return(
     
-                  <div className= {` ${position} w-full h-full flex items-center justify-center `}key={index}>
+                  <div className= {` w-full h-full`} key={index}>
                     <div className=" relative w-full h-full">
                       <Image src={urlFor(image).url()} unoptimized={true} width={2000} height={2000} priority alt="hero banner" className=" w-full h-screen object-cover object-center  relative" />
   
@@ -130,7 +106,7 @@ const Banners = () => {
   
                     </div>
 
-                    <div className=" absolute bottom-0 w-full h-12 bg-gray-500/40 backdrop-blur-3xl flex items-center justify-end text-xl pr-4">
+                    <div className=" absolute bottom-0 w-full h-12 bg-gray-500/40 backdrop-blur-3xl flex items-center justify-end text-xl pr-4 z-50">
                       {
                           NavDotButton.map((dotItem, index)=>{
                             
@@ -155,7 +131,8 @@ const Banners = () => {
             })
           }
 
-        </div>
+
+        </Slider>
       </article>
     </section>    
     </>
