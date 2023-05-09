@@ -5,7 +5,7 @@ import { Icon } from '@iconify/react';
 const Header = () => {
   return (
     <header className='fixed top-0 left-0 w-full z-50'>
-        <div className=' w-full h-8 bg-black/90 text-white/90 text-xs flex items-center justify-center'>
+        <div className=' w-full h-8 bg-black text-white/90 text-xs flex items-center justify-center z-50'>
             <p>
                 The definitive wardrobe - shop the Men's Icons collection
             </p>

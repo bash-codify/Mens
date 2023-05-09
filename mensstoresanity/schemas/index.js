@@ -1,9 +1,11 @@
 import banner from './banner'
+import for_him from './for_him'
 import hightlight from './hightlight'
-import secbanner from './secbanner'
+import poster from './poster'
 
 export const schemaTypes = [
     banner,
     hightlight,
-    secbanner,
+    poster,
+    for_him,
 ]

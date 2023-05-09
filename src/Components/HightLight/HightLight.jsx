@@ -16,7 +16,7 @@ const HightLight = () => {
 
     const [data, setData] = useState([]);
     const [selectindex, setSelectIndex] = useState(0);
-    const [slidesToScroll, setSlideToShow] = useState(1);
+
 
    const settings = {
    
@@ -86,7 +86,7 @@ const HightLight = () => {
     
 
   return (
-    <section className=' w-full min-h-screen -z-50'>
+    <section className=' w-full -z-50'>
         <article className=' w-w95 m-auto pt-20 relative'>
             <div >
                 <div className=' absolute -mt-4'>
@@ -96,7 +96,7 @@ const HightLight = () => {
                 </div>
                 <div className=' relative wrapper'>
                     <div className=' -z-50'>
-                        <div className=' S960:flex items-center justify-center gap-10 -z-50'>
+                        <div className=' S960:flex items-center  gap-10 -z-50'>
                             <div className=' flex item-center justify-center bg-neutral-200/95 w-full S960:h-h26 h-h26 S600:h-h30 S700:h-h33 S1024:h-h21 S1200:h-h30'>
                                 {
                                     selectindex?
@@ -108,8 +108,12 @@ const HightLight = () => {
                                     if(index === 0){
 
                                         return (
+
+                                            <div className='flex item-center justify-center ' key={index}>
+                                                
+                                                <Image src={urlFor(item.image).url()} unoptimized={true} width={2000} height={2000} priority alt="hero banner" className=" w-80 object-contain hover:scale-110 S960:hover:scale-125 transition-all duration-500 ease-linear cursor-pointer" />
+                                            </div>
     
-                                            <Image src={urlFor(item.image).url()} unoptimized={true} width={2000} height={2000} priority alt="hero banner" className=" w-80 object-contain hover:scale-110 S960:hover:scale-125 transition-all duration-500 ease-linear cursor-pointer" />
                                         )
                                     }
 
@@ -118,7 +122,7 @@ const HightLight = () => {
                                 }
                             </div>
                             <div className=' w-40'>
-                                <h2 className=' font-bold text-xl'>
+                                <div className=' font-bold text-xl'>
                                 {
                                     selectindex? data[selectindex].name 
                                     : 
@@ -127,10 +131,14 @@ const HightLight = () => {
                                     if(index === 0){
 
                                         return (
+
+                                            <div key={index}>
+                                                <h1>
+                                                    {item.name}
+                                                </h1>
+
+                                            </div>
     
-                                            <h1>
-                                                {item.name}
-                                            </h1>
                                         )
                                     }
 
@@ -138,8 +146,8 @@ const HightLight = () => {
                                    })
 
                                 }
-                                </h2>
-                                <p className=' flex items-center font-semibold text-sm'>
+                                </div>
+                                <div className=' flex items-center font-semibold text-sm'>
                                     <span><Icon icon="mdi:naira" /></span>
                                 {
                                     selectindex? data[selectindex].price 
@@ -149,10 +157,14 @@ const HightLight = () => {
                                     if(index === 0){
 
                                         return (
+
+                                            <div key={index}>
+                                                <p>
+                                                    {item.price}
+                                                </p>
+
+                                            </div>
     
-                                            <p>
-                                                {item.price}
-                                            </p>
                                         )
                                     }
 
@@ -160,7 +172,7 @@ const HightLight = () => {
                                    })
 
                                 }
-                                </p>
+                                </div>
                             </div>
 
                         </div>
@@ -177,7 +189,7 @@ const HightLight = () => {
                                 data.map((item, index) => {
 
                                     return (
-                                        <Sliders item={item} index={index} />
+                                        <Sliders item={item} key={index} />
 
                                     )
                                 })

@@ -48,6 +48,10 @@ const settings = {
       autoplay: true,
       autoplaySpeed: 4000,
       arrows:false,
+      afterChange: index =>{
+      setCurrent( index)
+      }
+
     };
 
 
@@ -74,9 +78,9 @@ const settings = {
 
     <>
     <section className=" w-full min-h-h90">
-      <article className=" sm:w-w95 m-auto">
+      <article className=" S768:w-w95 m-auto">
         
-        <Slider {...settings} className=" overflow-hidden -z-50">
+        <Slider {...settings} className="overflow-hidden -z-50">
 
           {
             bandata.map((item, index)=> {
@@ -87,12 +91,12 @@ const settings = {
 
                 return(
     
-                  <div className= {` w-full h-full`} key={index}>
+                  <div className= " w-full h-full" key={index}>
                     <div className=" relative w-full h-full">
                       <Image src={urlFor(image).url()} unoptimized={true} width={2000} height={2000} priority alt="hero banner" className=" w-full h-screen object-cover object-center  relative" />
   
-                      <div className=" absolute botton-2/4 left-2/4 -mt-36 -translate-x-2/4  flex flex-col items-center justify-center gap-2 uppercase w-full md:items-end md:justify-center md:pr-12">
-                        <div className=" text-2xl font-bold text-red-600">
+                      <div className=" absolute botton-2/4 left-2/4 -mt-36 -translate-x-2/4  flex flex-col items-center justify-center gap-2 uppercase w-full md:items-end md:justify-center md:pr-12 ">
+                        <div className=" text-2xl font-bold text-white bg-neutral-400/30 backdrop-blur-3xl">
                           <h2>
                             {title}
                           </h2>
@@ -106,24 +110,6 @@ const settings = {
   
                     </div>
 
-                    <div className=" absolute bottom-0 w-full h-12 bg-gray-500/40 backdrop-blur-3xl flex items-center justify-end text-xl pr-4 z-50">
-                      {
-                          NavDotButton.map((dotItem, index)=>{
-                            
-                            return(
-                              <div className={`${index === current? 'text-white' : 'text-gray-600'} cursor-pointer`} key={index} onClick={()=> setCurrent(index )}>
-                                <span>
-                                  {dotItem.icon}
-                                </span>
-                                
-                
-                              </div>
-
-                            )
-                          })
-                      }
-                    </div>
-
                   </div>
                 )
               
@@ -133,6 +119,26 @@ const settings = {
 
 
         </Slider>
+        <div className="  sm:w-w95 m-auto absolute bottom-0 left-0 right-0 w-full h-12 bg-gray-500/40 backdrop-blur-3xl flex items-center justify-end text-xl pr-4 overflow-x-hidden">
+          <div className=" flex items-center mr-6 overflow-x-hidden">
+            {
+                NavDotButton.map((dotItem, index)=>{
+                  
+                  return(
+                    <div className={`${index === current? 'text-white' : 'text-gray-600'}  cursor-pointer`} key={index} onClick={()=> setCurrent(index )}>
+                      <span>
+                        {dotItem.icon}
+                      </span>
+                      
+
+                    </div>
+
+                  )
+                })
+            }
+
+          </div>
+        </div>
       </article>
     </section>    
     </>

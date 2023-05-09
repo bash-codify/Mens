@@ -1,7 +1,7 @@
 export default {
 
-    name: 'secbanner',
-    title: 'SecBanner',
+    name: 'poster',
+    title: 'Poster',
     type: 'document',
     fields: [
 
