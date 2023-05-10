@@ -23,8 +23,8 @@ const For_Him = () => {
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 4000,
-      // nextArrow: <NextArrow/>,
-      // prevArrow: <PrevArrow/>,
+      nextArrow: <NextArrow/>,
+      prevArrow: <PrevArrow/>,
 
     };
 
@@ -57,9 +57,9 @@ const For_Him = () => {
     <section className=" w-full mt-20">
       <article className=" S768:w-w95 m-auto">
         
-        <div className="grid S960:grid-cols-2 place-items-center gap-10">
+        <div className="grid S960:grid-cols-2 place-items-center items-center gap-10">
 
-          <div>
+          <div className=" w-full">
             {
             flydata.map((item, index)=> {
 
@@ -71,11 +71,12 @@ const For_Him = () => {
 
               return(
   
-                <div className= " w-full h-full bg-red-500" key={index}>
+                <div className= " w-full h-full relative" key={index}>
               
-                    <Image src={urlFor(image).url()} unoptimized={true} width={2000} height={2000} priority alt="hero banner" className=" w-full h-fit object-cover object-center  relative" />
+                    <Image src={urlFor(image).url()} unoptimized={true} width={2000} height={2000} priority alt="hero banner" className="  w-full h-full object-cover object-center  " />
 
-                    <div className=" absolute botton-2/4 left-2/4 -mt-36 -translate-x-2/4  flex flex-col items-center justify-center gap-2 uppercase w-full md:items-end md:justify-center md:pr-12 ">
+                    <div className=" absolute botton-0 left-0 -mt-36 flex flex-col items-center justify-center gap-2 uppercase w-full ">
+
                       <div className=" text-2xl font-bold text-white">
 
                         <h2>
@@ -103,7 +104,7 @@ const For_Him = () => {
 
           </div>
 
-          <div >
+          <Slider {...settings} className=" w-80 flex items-center justify-center z-10">
 
             {
             flydata.splice(0, 4).map((item, index)=> {
@@ -136,7 +137,7 @@ const For_Him = () => {
             })
           }
 
-          </div>
+          </Slider>
 
         </div>
 
