@@ -43,8 +43,8 @@ const Posters = () => {
             posdata.map((item, index)=> {
 
               const image = item.image;
-              const title = item.Desc;
-              const button = item.ButtonText
+              const title = item.desc;
+              const button = item.button
 
                 return(
     

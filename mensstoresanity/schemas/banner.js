@@ -12,14 +12,14 @@ export default {
             },
         },
         {
-            name: 'Desc',
-            title: 'Desc',
+            name: 'desc',
+            title: 'desc',
             type:'string',
 
         },
         {
-            name: 'ButtonText',
-            title: 'FirstButton',
+            name: 'button',
+            title: 'button',
             type: 'string',
         },
     

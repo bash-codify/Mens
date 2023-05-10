@@ -1,7 +1,7 @@
 export default {
 
-    name: 'for_him',
-    title: 'For_Him',
+    name: 'shop',
+    title: 'shop',
     type: 'document',
     fields: [
 
@@ -15,20 +15,29 @@ export default {
         },
         
         {
-            name: 'Desc',
-            title: 'Desc',
+            name: 'productname',
+            title: 'name',
             type:'string',
 
         },
 
+        {
+            name: 'slug',
+            title: 'slug',
+            type: 'slug',
+            options: {
+                source: 'name',
+                maxLength: 100,
+            }
+        },
         {
             name: 'price',
             title: 'price',
             type: 'string',
         },
         {
-            name: 'button',
-            title: 'button',
+            name: 'details',
+            title: 'details',
             type: 'string',
         },
     

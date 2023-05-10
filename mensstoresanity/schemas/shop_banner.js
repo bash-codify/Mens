@@ -1,10 +1,8 @@
 export default {
-
-    name: 'poster',
-    title: 'Poster',
+    name: 'shop_banner',
+    title: 'Shop_Banner',
     type: 'document',
     fields: [
-
         {
             name: 'image',
             title: 'Image',
@@ -13,14 +11,12 @@ export default {
                 hotspot: true,
             },
         },
-        
         {
             name: 'desc',
             title: 'desc',
             type:'string',
 
         },
-
         {
             name: 'button',
             title: 'button',

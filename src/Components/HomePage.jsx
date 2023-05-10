@@ -2,7 +2,7 @@ import React from 'react'
 import Banners from './banner/Banners'
 import HightLight from './HightLight/HightLight'
 import Posters from './Posters'
-import Flyers from './flyers'
+import For_Him from './For_Him'
 import NewsLetter from './NewsLetter'
 
 
@@ -13,7 +13,7 @@ const HomePage = () => {
         <Banners/>
         <HightLight/>
         <Posters/>
-        <Flyers/>
+        <For_Him/>
         <NewsLetter/>
     </div>
   )

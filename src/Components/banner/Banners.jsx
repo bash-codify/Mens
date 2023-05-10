@@ -40,7 +40,7 @@ const Banners = () => {
 
 const settings = {
 
-      // dots: true,
+      dots: false,
       infinite: true,
       speed: 500,
       slidesToShow: 1,
@@ -86,8 +86,8 @@ const settings = {
             bandata.map((item, index)=> {
 
               const image = item.image;
-              const title = item.Desc;
-              const button = item.ButtonText
+              const title = item.desc;
+              const button = item.button
 
                 return(
     
@@ -120,12 +120,13 @@ const settings = {
 
         </Slider>
         <div className="  sm:w-w95 m-auto absolute bottom-0 left-0 right-0 w-full h-12 bg-gray-500/40 backdrop-blur-3xl flex items-center justify-end text-xl pr-4 overflow-x-hidden">
+
           <div className=" flex items-center mr-6 overflow-x-hidden">
             {
                 NavDotButton.map((dotItem, index)=>{
                   
                   return(
-                    <div className={`${index === current? 'text-white' : 'text-gray-600'}  cursor-pointer`} key={index} onClick={()=> setCurrent(index )}>
+                    <div className={`${index === current? 'text-white' : 'text-gray-600'}  cursor-pointer`} key={index}>
                       <span>
                         {dotItem.icon}
                       </span>

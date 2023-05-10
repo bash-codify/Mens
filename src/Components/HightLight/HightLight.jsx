@@ -1,16 +1,11 @@
 "use client"
 import React, {useState, useEffect} from 'react'
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
 import { Icon } from '@iconify/react';
 import { client, urlFor } from '../../../lib/client';
 import Image from 'next/image';
-
 import '../HightLight/style.css'
 import Sliders from './Sliders';
-import PrevArrow from './PrevArrow';
-import NextArrow from './NextArrow';
 
 const HightLight = () => {
 
