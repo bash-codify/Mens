@@ -2,10 +2,11 @@
 import React, {useState, useEffect} from 'react'
 import Slider from "react-slick";
 import { Icon } from '@iconify/react';
-import { client, urlFor } from '../../../lib/client';
 import Image from 'next/image';
-import '../HightLight/style.css'
+import '../HightLight/style.css';
 import Sliders from './Sliders';
+import { client, urlFor } from '../../../../lib/client';
+
 
 const HightLight = () => {
 

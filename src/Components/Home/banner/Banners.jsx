@@ -1,11 +1,11 @@
 'use client'
 import React, { useEffect, useState} from "react";
-import { client, urlFor } from "../../../lib/client";
 import Image from "next/image";
 import { Icon } from '@iconify/react';
 import Slider from "react-slick";
 
 import './banner.css'
+import { client, urlFor } from "../../../../lib/client";
 
 const NavDotButton = [
   

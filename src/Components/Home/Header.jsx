@@ -5,12 +5,12 @@ import { Icon } from '@iconify/react';
 const Header = () => {
   return (
     <header className='fixed top-0 left-0 w-full z-50'>
-        <div className=' w-full h-8 bg-black text-white text-xs flex items-center justify-center z-50'>
+        <div className=' w-full h-8 bg-black text-white/90 text-xs flex items-center justify-center z-50'>
             <p>
                 The definitive wardrobe - shop the Men's Icons collection
             </p>
         </div>
-        <div className=' w-full h-h10 bg-white/30 backdrop-blur-md z-50'>
+        <div className=' w-full h-h10 bg-white/95 backdrop-blur-md z-50'>
             <nav className=' w-w90 sm:w-w95 m-auto h-h10 z-50'>
                 <div className=' flex items-center justify-between h-h10'>
 

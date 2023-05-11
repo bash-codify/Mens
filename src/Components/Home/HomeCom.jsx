@@ -7,7 +7,7 @@ import NewsLetter from './NewsLetter'
 
 
 
-const HomePage = () => {
+const HomeCom = () => {
   return (
     <div>
         <Banners/>
@@ -19,4 +19,4 @@ const HomePage = () => {
   )
 }
 
-export default HomePage
+export default HomeCom

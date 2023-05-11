@@ -1,5 +1,7 @@
+import HomeCom from "@/Components/Home/HomeCom";
 
-import HomePage from "@/Components/HomePage";
+
+
 
 
 export default  function Home() {
@@ -8,7 +10,7 @@ export default  function Home() {
   
   return (
     <main>
-    <HomePage/>
+     <HomeCom/>
     </main>
   )
 }

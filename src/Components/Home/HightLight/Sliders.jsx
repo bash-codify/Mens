@@ -1,8 +1,9 @@
 import React from 'react';
 import Slider from "react-slick";
 import { Icon } from '@iconify/react';
-import { urlFor } from '../../../lib/client';
+
 import Image from 'next/image';
+import { urlFor } from '../../../../lib/client';
 
 
 const Sliders = ({item}) => {

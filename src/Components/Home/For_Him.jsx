@@ -2,10 +2,11 @@
 import React, { useEffect, useState} from "react";
 import Image from "next/image";
 import { Icon } from '@iconify/react';
-import { client, urlFor } from "../../lib/client";
 import Slider from "react-slick";
-import NextArrow from "./NextArrow";
-import PrevArrow from "./PrevArrow";
+import { client, urlFor } from "../../../lib/client";
+import NextArrow from "../NextArrow";
+import PrevArrow from "../PrevArrow";
+
 
 
 

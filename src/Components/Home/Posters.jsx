@@ -1,8 +1,9 @@
 'use client'
 import React, { useEffect, useState} from "react";
 import Image from "next/image";
-import { Icon } from '@iconify/react';
-import { client, urlFor } from "../../lib/client";
+import { client, urlFor } from "../../../lib/client";
+
+
 
 
 
