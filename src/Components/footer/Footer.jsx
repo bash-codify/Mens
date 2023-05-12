@@ -24,7 +24,9 @@ const Footer = () => {
   return (
 
     <section className=' w-full min-h-h50 bg-black text-white py-5'>
+
         <article className=' w-w95 m-auto'>
+            
             <div className=' flex flex-col S1200:flex-row S1200:justify-between'>
 
                 <div className=' flex flex-col S1200:flex-row  S1200:gap-10 S1200:py-10'>
@@ -47,7 +49,7 @@ const Footer = () => {
                                     </h1>
 
                                     </div>
-                                    <div className=' text-[2.6rem] S1200:hidden'>
+                                    <div className=' text-[2.2rem] S1200:hidden'>
                                         <span>
                                             <Icon icon="material-symbols:keyboard-arrow-down-rounded" className={` ${dataindex === index? 'rotate-180 transition-all duration-500 ease-linear' : 'rotate-0 transition-all duration-500 ease-linear'}`} />
                                         </span>

@@ -17,11 +17,6 @@ export default {
             type:'string',
 
         },
-        {
-            name: 'button',
-            title: 'button',
-            type: 'string',
-        },
-    
+        
     ],
 };
