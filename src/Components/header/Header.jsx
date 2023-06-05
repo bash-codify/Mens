@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { Icon } from '@iconify/react';
+import NavLinks from './NavLinks';
 
 const Header = () => {
   return (
@@ -42,6 +43,9 @@ const Header = () => {
                 </div>
             </nav>
 
+        </div >
+        <div className=" wifull min-h-screen bg-neutral-500/50">
+                <NavLinks/>            
         </div>
     </header>
   )

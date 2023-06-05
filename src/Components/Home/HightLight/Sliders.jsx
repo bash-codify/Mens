@@ -1,10 +1,7 @@
 import React from 'react';
-import Slider from "react-slick";
 import { Icon } from '@iconify/react';
-
 import Image from 'next/image';
-import { urlFor } from '../../../../lib/client';
-
+import { urlFor } from '../../../../lib/client';;
 
 const Sliders = ({item}) => {
 
@@ -12,7 +9,7 @@ const Sliders = ({item}) => {
   return (
     <div>
         
-        <div className='mr-1' >
+        <div className=' mr-1'>
 
             <div className=' bg-neutral-200/95 w-full h-72 S600:h-80 S700:h-96 S960:h-h21 S1024:h-h19 S1200:h-96 flex item-center justify-center' >
 

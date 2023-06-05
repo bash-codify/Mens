@@ -2,7 +2,7 @@
 import React, { useEffect, useState} from "react";
 import Image from "next/image";
 import { client, urlFor } from "../../../lib/client";
-
+import { motion } from "framer-motion"
 
 
 
@@ -35,7 +35,7 @@ const Posters = () => {
 
   return (
 
-    <section className=" w-full mt-20 ">
+    <section className=" w-full min-h-screen mt-20">
       <article className=" S768:w-w95 m-auto">
         
         <div className="overflow-hidden -z-50">
@@ -49,7 +49,12 @@ const Posters = () => {
 
                 return(
     
-                  <div className= " w-full h-full bg-red-500" key={index}>
+                  <motion.div
+                  initial={{ scale:0, opacity: 0 }}
+                  whileInView={{scale: 1, opacity: 1 }} 
+                  viewport={{ once: true }}
+                  transition={{ duration: 3,}}  
+                  className= " w-full h-full bg-red-500" key={index}>
                     <div className=" w-full ">
                       <Image src={urlFor(image).url()} unoptimized={true} width={2000} height={2000} priority alt="hero banner" className=" w-full h-h90 object-cover object-center  relative" />
   
@@ -72,7 +77,7 @@ const Posters = () => {
   
                     </div>
 
-                  </div>
+                  </motion.div>
                 )
               
             

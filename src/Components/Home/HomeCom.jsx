@@ -9,9 +9,9 @@ import NewsLetter from './NewsLetter'
 
 const HomeCom = () => {
   return (
-    <div>
-        <Banners/>
-        <HightLight/>
+    <div >
+        <Banners />
+        <HightLight />
         <Posters/>
         <For_Him/>
         <NewsLetter/>

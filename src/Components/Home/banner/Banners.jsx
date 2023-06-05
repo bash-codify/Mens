@@ -77,7 +77,7 @@ const settings = {
   return (
 
     <>
-    <section className=" w-full min-h-h90">
+    <section className=" relative w-full min-h-h90">
       <article className=" S768:w-w95 m-auto">
         
         <Slider {...settings} className="overflow-hidden -z-50">

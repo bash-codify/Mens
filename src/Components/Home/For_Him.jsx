@@ -6,7 +6,7 @@ import Slider from "react-slick";
 import { client, urlFor } from "../../../lib/client";
 import NextArrow from "../NextArrow";
 import PrevArrow from "../PrevArrow";
-
+import {motion} from 'framer-motion'
 
 
 
@@ -55,12 +55,17 @@ const For_Him = () => {
 
   return (
 
-    <section className=" w-full mt-20">
+    <section className=" w-full min-h-screen mt-20 bg-white">
       <article className=" S768:w-w95 m-auto">
         
         <div className="grid S960:grid-cols-2 place-items-center items-center gap-10">
 
-          <div className=" w-full">
+          <motion.div
+          initial={{ scale: 0, opacity: 0 }}
+          whileInView={{scale: 1, opacity: 1 }} 
+          viewport={{ once: true }}
+          transition={{ delay: 1, duration: 3,}}
+          className=" w-full">
             {
             flydata.map((item, index)=> {
 
@@ -103,42 +108,51 @@ const For_Him = () => {
             })
           }
 
-          </div>
+          </motion.div>
 
-          <Slider {...settings} className=" w-80 flex items-center justify-center z-10">
+          <motion.div
+          initial={{ scale: 1.6, opacity: 1 }}
+          whileInView={{scale: 1, opacity: 1 }} 
+          viewport={{ once: true }}
+          transition={{ delay: 1.5, duration: 3,}}>
 
-            {
-            flydata.splice(0, 4).map((item, index)=> {
+            <Slider {...settings} className=" w-80 flex items-center justify-center z-10">
 
-              const image = item.image;
-              const title = item.Desc;
-              const price = item.price;
+              {
+              flydata.splice(0, 4).map((item, index)=> {
 
-              return(
-  
-              <div key={index} >
+                const image = item.image;
+                const title = item.Desc;
+                const price = item.price;
 
-                <div className=' bg-neutral-200/95 w-80 h-96 S600:h-80 S700:h-96 S960:h-h21 S1024:h-h19 S1200:h-96 flex item-center justify-center' >
+                return(
+    
+                <div 
+                key={index} >
 
-                    <Image src={urlFor(image).url()} unoptimized={true} width={2000} height={2000} priority alt="hero banner" className=" w-60 object-contain cursor-pointer" />
+                  <div className=' bg-neutral-200/95 w-80 h-96 S600:h-80 S700:h-96 S960:h-h21 S1024:h-h19 S1200:h-96 flex item-center justify-center' >
 
-                </div>
+                      <Image src={urlFor(image).url()} unoptimized={true} width={2000} height={2000} priority alt="hero banner" className=" w-60 object-contain cursor-pointer" />
 
-                <div className='flex flex-col items-center justify-center pt-4'>
-                    <h2 className=' font-bold text-2xl'>
-                        {title}
-                    </h2>
-                    <p className=' flex items-center gap-1 text-[.8rem] font-normal'>
-                        <span><Icon icon="mdi:naira" /></span>{price}
-                    </p>
-                </div>
-              </div>  
-              )   
-            
-            })
-          }
+                  </div>
 
-          </Slider>
+                  <div className='flex flex-col items-center justify-center pt-4'>
+                      <h2 className=' font-bold text-2xl'>
+                          {title}
+                      </h2>
+                      <p className=' flex items-center gap-1 text-[.8rem] font-normal'>
+                          <span><Icon icon="mdi:naira" /></span>{price}
+                      </p>
+                  </div>
+                </div>  
+                )   
+              
+              })
+            }
+
+            </Slider>
+          </motion.div>
+
 
         </div>
 

@@ -6,6 +6,7 @@ import Image from 'next/image';
 import '../HightLight/style.css';
 import Sliders from './Sliders';
 import { client, urlFor } from '../../../../lib/client';
+import { motion } from "framer-motion"
 
 
 const HightLight = () => {
@@ -20,7 +21,7 @@ const HightLight = () => {
       speed: 500,
       slidesToShow: 4,
       slidesToScroll: 1,
-      initialSlide: 0,
+      initialSlide: 1,
     //   nextArrow: <NextArrow/>,
     //   prevArrow: <PrevArrow/>,
       arrows: false,
@@ -82,16 +83,25 @@ const HightLight = () => {
     
 
   return (
-    <section className=' w-full -z-50'>
+    <section className=' relative w-full min-h-screen -z-50'>
         <article className=' w-w95 m-auto pt-20 relative'>
             <div >
-                <div className=' absolute -mt-4'>
+                <motion.div
+                initial={{ scale:0, opacity: 0 }}
+                whileInView={{scale: 1, opacity: 1 }} 
+                viewport={{ once: true }}
+                transition={{ duration: 4,}} 
+                className=' absolute -mt-4'>
                     <h1 className=' text-2xl S700:text-3xl S960:text-4xl text-black/90 font-bold z-50'>
                         HIGHLIGHTS
                     </h1>
-                </div>
+                </motion.div>
                 <div className=' relative wrapper'>
-                    <div className=' -z-50'>
+                    <motion.div
+                    initial={{ x: "-100%", opacity: 0 }}
+                    whileInView={{x: "0%", opacity: 1 }} 
+                    transition={{ delay: 1, duration: 5,}}
+                    className=' -z-50'>
                         <div className=' S960:flex items-center  gap-10 -z-50'>
                             <div className=' flex item-center justify-center bg-neutral-200/95 w-full S960:h-h26 h-h26 S600:h-h30 S700:h-h33 S1024:h-h21 S1200:h-h30'>
                                 {
@@ -117,6 +127,7 @@ const HightLight = () => {
                                    })
                                 }
                             </div>
+
                             <div className=' w-40'>
                                 <div className=' font-bold text-xl'>
                                 {
@@ -173,9 +184,13 @@ const HightLight = () => {
 
                         </div>
 
-                    </div>
+                    </motion.div>
 
-                    <div>
+                    <motion.div
+                    initial={{ scale: 0, opacity: 0 }}
+                    whileInView={{scale: 1, opacity: 1 }} 
+                    viewport={{ once: true }}
+                    transition={{ duration: 2,}}>
 
                         {/* <NextArrow/> */}
 
@@ -195,11 +210,24 @@ const HightLight = () => {
 
 
 
-                    </div>
+                    </motion.div>
                 </div>
                 
             </div>
         </article>
+
+        {/* <motion.div
+        initial={{x: "0%",  }}
+        whileInView={{ x: "-100%" }}
+        viewport={{ once: true }}
+        transition={{ delay:1, duration: 8,}}
+        className=' flex flex-col justify-center items-center absolute w-full h-full top-0 z-50 bg-black overlay-1'></motion.div> */}
+        {/* <motion.div
+        initial={{x: "0%",  }}
+        whileInView={{ x: "-100%" }}
+        viewport={{ once: true }}
+        transition={{ delay: 5, duration: 2,}}
+        className=' absolute w-full h-full top-0 z-40 bg-white overlay-2'></motion.div> */}
     </section>
   )
 }
