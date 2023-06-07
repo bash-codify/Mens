@@ -22,8 +22,6 @@ const HightLight = () => {
       slidesToShow: 4,
       slidesToScroll: 1,
       initialSlide: 1,
-    //   nextArrow: <NextArrow/>,
-    //   prevArrow: <PrevArrow/>,
       arrows: false,
       autoplay: true,
       autoplaySpeed: 5000,
@@ -83,16 +81,15 @@ const HightLight = () => {
     
 
   return (
-    <section className=' relative w-full min-h-screen -z-50'>
+    <section className=' w-full mt-16 -z-50'>
         <article className=' w-w95 m-auto pt-20 relative'>
-            <div >
+            <div className=' flex items-center justify-center' >
                 <motion.div
                 initial={{ scale:0, opacity: 0 }}
                 whileInView={{scale: 1, opacity: 1 }} 
-                viewport={{ once: true }}
                 transition={{ duration: 4,}} 
-                className=' absolute -mt-4'>
-                    <h1 className=' text-2xl S700:text-3xl S960:text-4xl text-black/90 font-bold z-50'>
+                className=' absolute top-0 left-0 mt-10'>
+                    <h1 className=' text-[3rem] S700:text-[3.4rem] S960:text-[3.6rem] text-black/90 font-bold z-50 tracking-widest'>
                         HIGHLIGHTS
                     </h1>
                 </motion.div>
@@ -102,8 +99,8 @@ const HightLight = () => {
                     whileInView={{x: "0%", opacity: 1 }} 
                     transition={{ delay: 1, duration: 5,}}
                     className=' -z-50'>
-                        <div className=' S960:flex items-center  gap-10 -z-50'>
-                            <div className=' flex item-center justify-center bg-neutral-200/95 w-full S960:h-h26 h-h26 S600:h-h30 S700:h-h33 S1024:h-h21 S1200:h-h30'>
+                        <div className=' S960:flex items-center gap-10 -z-50'>
+                            <div className=' flex item-center justify-center bg-neutral-200/95 w-full h-[60vh] S500:h-[65vh] S600:h-[80vh] S700:h-[90vh] S960:h-[63vh] S960:w-[90vw] S1200:h-[68vh]'>
                                 {
                                     selectindex?
                                     <Image src={`${urlFor(data[selectindex].image).url()}`} unoptimized={true} width={2000} height={2000} priority alt="hero banner" className=" w-80 object-contain hover:scale-110 S960:hover:scale-125 transition-all duration-500 ease-linear cursor-pointer" />    
@@ -128,8 +125,8 @@ const HightLight = () => {
                                 }
                             </div>
 
-                            <div className=' w-40'>
-                                <div className=' font-bold text-xl'>
+                            <div className=' w-full'>
+                                <div className='   font-bold text-[3rem] S960:text-[2rem]'>
                                 {
                                     selectindex? data[selectindex].name 
                                     : 
@@ -154,7 +151,7 @@ const HightLight = () => {
 
                                 }
                                 </div>
-                                <div className=' flex items-center font-semibold text-sm'>
+                                <div className=' flex items-center font-medium text-[2rem] S960:text-[1.6rem]'>
                                     <span><Icon icon="mdi:naira" /></span>
                                 {
                                     selectindex? data[selectindex].price 
@@ -189,10 +186,9 @@ const HightLight = () => {
                     <motion.div
                     initial={{ scale: 0, opacity: 0 }}
                     whileInView={{scale: 1, opacity: 1 }} 
-                    viewport={{ once: true }}
                     transition={{ duration: 2,}}>
 
-                        {/* <NextArrow/> */}
+                
 
                         <Slider {...settings} >
                             
@@ -216,18 +212,6 @@ const HightLight = () => {
             </div>
         </article>
 
-        {/* <motion.div
-        initial={{x: "0%",  }}
-        whileInView={{ x: "-100%" }}
-        viewport={{ once: true }}
-        transition={{ delay:1, duration: 8,}}
-        className=' flex flex-col justify-center items-center absolute w-full h-full top-0 z-50 bg-black overlay-1'></motion.div> */}
-        {/* <motion.div
-        initial={{x: "0%",  }}
-        whileInView={{ x: "-100%" }}
-        viewport={{ once: true }}
-        transition={{ delay: 5, duration: 2,}}
-        className=' absolute w-full h-full top-0 z-40 bg-white overlay-2'></motion.div> */}
     </section>
   )
 }

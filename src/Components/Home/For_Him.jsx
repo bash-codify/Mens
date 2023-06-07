@@ -24,8 +24,7 @@ const For_Him = () => {
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 4000,
-      nextArrow: <NextArrow/>,
-      prevArrow: <PrevArrow/>,
+      arrows: false,
 
     };
 
@@ -55,8 +54,8 @@ const For_Him = () => {
 
   return (
 
-    <section className=" w-full min-h-screen mt-20 bg-white">
-      <article className=" S768:w-w95 m-auto">
+    <section className=" w-full bg-white pt-32">
+      <article className=" S768:w-[95%] m-auto">
         
         <div className="grid S960:grid-cols-2 place-items-center items-center gap-10">
 
@@ -81,9 +80,9 @@ const For_Him = () => {
               
                     <Image src={urlFor(image).url()} unoptimized={true} width={2000} height={2000} priority alt="hero banner" className="  w-full h-full object-cover object-center  " />
 
-                    <div className=" absolute botton-0 left-0 -mt-36 flex flex-col items-center justify-center gap-2 uppercase w-full ">
+                    <div className=" absolute botton-0 left-0 -mt-64 flex flex-col items-center justify-center gap-2 uppercase w-full ">
 
-                      <div className=" text-2xl font-bold text-white">
+                      <div className=" text-[2.4rem] S500:text-[3rem] font-bold text-white">
 
                         <h2>
 
@@ -92,7 +91,7 @@ const For_Him = () => {
                         </h2>
 
                       </div>
-                      <div className=" bg-white w-52 h-12 flex items-center justify-center font-semibold border border-gray-500 cursor-pointer">
+                      <div className=" bg-white w-96 h-20 text-[3rem] flex items-center justify-center font-semibold border border-gray-500 cursor-pointer">
                         <button type="button">
                           {button}
                         </button>
@@ -114,12 +113,12 @@ const For_Him = () => {
           initial={{ scale: 1.6, opacity: 1 }}
           whileInView={{scale: 1, opacity: 1 }} 
           viewport={{ once: true }}
-          transition={{ delay: 1.5, duration: 3,}}>
+          transition={{ delay: 1.5, duration: 3,}} >
 
-            <Slider {...settings} className=" w-80 flex items-center justify-center z-10">
+            <Slider {...settings} className=" w-[32rem] flex items-center justify-center z-10">
 
               {
-              flydata.splice(0, 4).map((item, index)=> {
+              flydata.splice(0, 4).map((item, index) => {
 
                 const image = item.image;
                 const title = item.Desc;
@@ -130,17 +129,17 @@ const For_Him = () => {
                 <div 
                 key={index} >
 
-                  <div className=' bg-neutral-200/95 w-80 h-96 S600:h-80 S700:h-96 S960:h-h21 S1024:h-h19 S1200:h-96 flex item-center justify-center' >
+                  <div className=' bg-neutral-200/95 w-[32rem]  h-[60vh] S600:h-[65vh] S960:h-[70vh] flex item-center justify-center' >
 
-                      <Image src={urlFor(image).url()} unoptimized={true} width={2000} height={2000} priority alt="hero banner" className=" w-60 object-contain cursor-pointer" />
+                      <Image src={urlFor(image).url()} unoptimized={true} width={2000} height={2000} priority alt="hero banner" className=" w-72 object-contain cursor-pointer z-50" />
 
                   </div>
 
                   <div className='flex flex-col items-center justify-center pt-4'>
-                      <h2 className=' font-bold text-2xl'>
+                      <h2 className=' text-[3rem] font-semibold'>
                           {title}
                       </h2>
-                      <p className=' flex items-center gap-1 text-[.8rem] font-normal'>
+                      <p className=' flex items-center gap-1 text-[2rem] font-medium '>
                           <span><Icon icon="mdi:naira" /></span>{price}
                       </p>
                   </div>
