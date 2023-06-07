@@ -95,7 +95,7 @@ const settings = {
                     <div className=" relative w-full h-full">
                       <Image src={urlFor(image).url()} unoptimized={true} width={2000} height={2000} priority alt="hero banner" className=" w-full h-screen object-cover object-center  relative" />
   
-                      <div className=" absolute botton-2/4 left-2/4 -mt-64 -translate-x-2/4  flex flex-col items-center justify-center gap-2 uppercase w-full md:items-end md:justify-center md:pr-12 ">
+                      <div className=" absolute botton-2/4 left-2/4 -mt-72 -translate-x-2/4  flex flex-col items-center justify-center gap-2 uppercase w-full md:items-end md:justify-center md:pr-12 ">
                         <div className=" text-[2rem] S960:text-[3rem] font-bold text-white bg-neutral-400/30 backdrop-blur-3xl">
                           <h2>
                             {title}

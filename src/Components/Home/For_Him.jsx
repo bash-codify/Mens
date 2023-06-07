@@ -54,7 +54,7 @@ const For_Him = () => {
 
   return (
 
-    <section className=" w-full bg-white pt-32">
+    <section className=" w-full bg-white py-32">
       <article className=" S768:w-[95%] m-auto">
         
         <div className="grid S960:grid-cols-2 place-items-center items-center gap-10">

@@ -14,33 +14,33 @@ const NavLinks = ({setMenuToggle, setContactToggle, contacttoggle}) => {
         <div className=' fixed top-0 left-0 bottom-0 flex '>
 
 
-            <div className=' w-[26rem] min-h-screen bg-white flex items-start justify-start flex-col '>
-                <div className=' w-full h-[5vh] flex items-start flex-col justify-start gap-6 px-5 font-semibold pt-8 '>
+            <div className=' w-[26rem] S500:w-[35rem] min-h-screen bg-white flex items-start justify-start flex-col '>
+                <div className=' w-full h-[5vh] flex items-start flex-col justify-start gap-6 px-10 font-semibold mt-8 tracking-widest'>
                         <div>
-                            <h1 className=' text-[2.8rem] font-semibold'>
+                            <h1 className=' text-[2.8rem] font-semibold hover:text-neutral-400 cursor-pointer'>
                                 Men's
                             </h1>
                         </div>
-                    </div>
+                </div>
 
-                <div className=' w-full h-[58vh] flex items-start flex-col justify-start gap-6 px-5 text-[2.2rem] font-semibold pt-28'>
-                    <div>
+                <div className=' w-full h-[58vh] flex items-start flex-col justify-start gap-6 px-10 text-[2.2rem] font-semibold pt-28 tracking-wider'>
+                    <div className=' hover:text-neutral-400'>
                         <a href="#/">
                             Home
                         </a>
                     </div>
-                    <div>
+                    <div className=' hover:text-neutral-400'>
                         <a href="#/">
                             Shop
                         </a>
                     </div>
 
-                    <div>
+                    <div className=' hover:text-neutral-400'>
                         <a href="#/">
                             About
                         </a>
                     </div>
-                    <div className=' w-full flex items-center justify-between gap-2 cursor-pointer' onClick={()=> setContactToggle(true)}>
+                    <div className=' w-full flex items-center justify-between gap-2 cursor-pointer hover:text-neutral-400' onClick={()=> setContactToggle(true)}>
                         
                         <span>
                             Contact Us
@@ -52,9 +52,9 @@ const NavLinks = ({setMenuToggle, setContactToggle, contacttoggle}) => {
 
                 </div>
 
-                <div className=' w-[26rem] h-[42vh] bg-gray-300 flex items-start justify-center flex-col gap-6 text-[2.2rem] px-5'>
+                <div className=' w-[26rem] S500:w-[35rem] h-[42vh] bg-gray-300 flex items-start justify-center flex-col gap-6 text-[2.2rem] px-10 tracking-wider'>
 
-                    <div className=' flex items-center justify-start gap-2 cursor-pointer '>
+                    <div className=' flex items-center justify-start gap-4 cursor-pointer hover:text-neutral-400 '>
                         <span>
                             
                             <Icon icon="clarity:user-line" />
@@ -63,7 +63,7 @@ const NavLinks = ({setMenuToggle, setContactToggle, contacttoggle}) => {
                             Sign In
                         </span>
                     </div>
-                    <div className=' flex items-center justify-start gap-2 cursor-pointer'>
+                    <div className=' flex items-center justify-start gap-4 cursor-pointer hover:text-neutral-400 '>
                         <span>
                             <Icon icon="material-symbols:location-on-outline" />
                         </span>
@@ -71,7 +71,7 @@ const NavLinks = ({setMenuToggle, setContactToggle, contacttoggle}) => {
                             Stores
                         </span>
                     </div>
-                    <div className=' flex items-center justify-start gap-2 cursor-pointer'>
+                    <div className=' flex items-center justify-start gap-4 cursor-pointer hover:text-neutral-400 '>
                         <span >
                             <Icon icon="streamline:interface-favorite-heart-reward-social-rating-media-heart-it-like-favorite-love" />
                         </span>

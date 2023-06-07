@@ -29,7 +29,7 @@ const Header = () => {
                         <Icon icon="clarity:menu-line" color="black" />
                         </div>
                         <div>
-                            <h1 className=' text-[2.6rem] font-semibold'>
+                            <h1 className=' text-[2.6rem] font-semibold tracking-widest hover:text-neutral-400 cursor-pointer'>
                                 Men's
                             </h1>
                         </div>

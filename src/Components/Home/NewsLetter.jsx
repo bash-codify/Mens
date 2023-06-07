@@ -2,7 +2,7 @@ import React from 'react'
 
 const NewsLetter = () => {
   return (
-    <section className=' w-full h-[26rem] S500:h-[23rem] S960:h-[26rem] bg-gray-200 mt-32 '>
+    <section className=' w-full h-[26rem] S500:h-[23rem] S960:h-[26rem] bg-gray-200 '>
         <article className=' flex flex-col px-4 S768:items-center S768:justify-center'>
           
                 <div className=' w-full flex flex-col items-center justify-center h-h20'>
