@@ -22,19 +22,19 @@ const Form = () => {
                         <div className=' flex flex-col gap-4 items-start justify-start'>
                             <label  className=' text-[1.48rem] font-thin tracking-wider '  htmlFor="FirstName">First Name</label>
 
-                            <input className=' w-full h-16 p-3 text-[1.48rem] font-serif focus:border border-black outline-none tracking-wide italic' type="text" name='firstName' placeholder='Please neter your First Name' />
+                            <input className=' w-full h-16 p-3 text-[1.48rem] font-serif focus:border border-black outline-none tracking-wide italic' type="text" name='firstName' placeholder='Please enter your First Name' />
                         </div>
 
                         <div className=' flex flex-col gap-4 items-start justify-start'>
                             <label  className=' text-[1.48rem] font-thin tracking-wider '  htmlFor="lastName">Last Name</label>
 
-                            <input className=' w-full h-16 p-3 text-[1.48rem] font-serif focus:border border-black outline-none tracking-wide italic' type="text" name='lastName' placeholder='Please neter your Last Name' />
+                            <input className=' w-full h-16 p-3 text-[1.48rem] font-serif focus:border border-black outline-none tracking-wide italic' type="text" name='lastName' placeholder='Please enter your Last Name' />
                         </div>
 
                         <div className=' flex flex-col gap-4 items-start justify-start'>
                             <label  className=' text-[1.48rem] font-thin tracking-wider '  htmlFor="email">Email <span className=' text-red-500 '> *</span></label>
 
-                            <input className=' w-full h-16 p-3 text-[1.48rem] font-serif focus:border border-black outline-none tracking-wide italic' type="email" name='email' placeholder='Please neter your Email' />
+                            <input className=' w-full h-16 p-3 text-[1.48rem] font-serif focus:border border-black outline-none tracking-wide italic' type="email" name='email' placeholder='Please enter your Email' />
                         </div>
 
                         <div className=' flex flex-col gap-4 items-start justify-start'>
@@ -51,7 +51,7 @@ const Form = () => {
                         <div className=' flex flex-col gap-4 items-start justify-start'>
                             <label  className=' text-[1.48rem] font-thin tracking-wider '  htmlFor="language">State or Region <span className=' text-red-500 '> *</span></label>
 
-                            <select className=' w-full h-16 p-3 text-[1.48rem] font-serif focus:border border-black outline-none tracking-wide italic' type="text" name='language' id='language' placeholder='Language'>
+                            <select className=' w-full h-16 p-3 text-[1.48rem] font-serif focus:border border-black outline-none tracking-wide italic' type="text" name='language' id='language' placeholder='Please enter your Language'>
                             <option value="English">English</option>
                             <option value="Yoruba">Yoruba</option>
                             <option value="Igbo">Igbo</option>
@@ -66,6 +66,7 @@ const Form = () => {
                             <label  className=' text-[1.48rem] font-thin tracking-wider '  htmlFor="state">State or Region <span className=' text-red-500 '> *</span></label>
 
                             <select className=' w-full h-16 p-3 text-[1.48rem] font-serif focus:border border-black outline-none tracking-wide italic' type="text" name='state' id='state' placeholder='Lagos'>
+
                             <option value="Lagos">Lagos</option>
                             <option value="Abia">Abia</option>
                             <option value="Gombe">Gombe</option>

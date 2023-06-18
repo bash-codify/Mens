@@ -81,14 +81,14 @@ const HightLight = () => {
     
 
   return (
-    <section className=' w-full mt-16 -z-50'>
+    <section className=' w-full mt-16 bg-white -z-50'>
         <article className=' w-w95 m-auto pt-20 relative'>
             <div className=' flex items-center justify-center' >
                 <motion.div
                 initial={{ scale:0, opacity: 0 }}
                 whileInView={{scale: 1, opacity: 1 }} 
                 transition={{ duration: 4,}} 
-                className=' absolute top-0 left-0 mt-10'>
+                className=' absolute top-0 left-0 mt-10 z-50'>
                     <h1 className=' text-[3rem] S700:text-[3.4rem] S960:text-[3.6rem] text-black/90 font-bold z-50 tracking-widest'>
                         HIGHLIGHTS
                     </h1>
@@ -98,7 +98,7 @@ const HightLight = () => {
                     initial={{ x: "-100%", opacity: 0 }}
                     whileInView={{x: "0%", opacity: 1 }} 
                     transition={{ delay: 1, duration: 5,}}
-                    className=' -z-50'>
+                    className=' z-40'>
                         <div className=' S960:flex items-center gap-10 -z-50'>
                             <div className=' flex item-center justify-center bg-neutral-200/95 w-full h-[60vh] S500:h-[65vh] S600:h-[80vh] S700:h-[90vh] S960:h-[63vh] S960:w-[90vw] S1200:h-[68vh]'>
                                 {

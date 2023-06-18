@@ -94,7 +94,7 @@ const Footer = () => {
                                         initial={{ scale: 0, opacity: 0 }}
                                         whileInView={{scale: 1, opacity: 1 }}
                                         transition={{ delay: 1, duration: 4,}} 
-                                        className={` ${dataindex === index? 'flex transition-all duration-500 ease-linear' : ' hidden transition-all duration-500 ease-linear'} S1200:flex flex-col gap-2 items-start justify-center text-[1.8rem] py-4 font-medium`} key={i}>
+                                        className={` ${dataindex === index? 'flex transition-all duration-500 ease-linear' : ' hidden transition-all duration-500 ease-linear'} S1200:flex flex-col gap-2 items-start justify-center text-[1.4rem] py-4 font-medium tracking-widest`} key={i}>
                                                 <Link href=''>
                                                     {subTitle.list}
                                                 </Link>
@@ -137,7 +137,7 @@ const Footer = () => {
                             })
                         }
                     </div>
-                    <div className=' flex items-center justify-center py-5 text-[1.6rem] italic font-medium'>
+                    <div className=' flex items-center justify-center py-5 text-[1.4rem] italic font-medium'>
                         <p>
                             All Right Reserved @ Mens.com
                         </p>

@@ -35,7 +35,7 @@ const Posters = () => {
 
   return (
 
-    <section className=" w-full  bg-white pt-32">
+    <section className=" w-full  bg-white mt-32">
       <article className=" S768:w-[95%] m-auto">
         
         <div className="overflow-hidden -z-50">

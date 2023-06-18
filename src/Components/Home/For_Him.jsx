@@ -54,7 +54,7 @@ const For_Him = () => {
 
   return (
 
-    <section className=" w-full bg-white py-32">
+    <section className=" w-full bg-white my-32">
       <article className=" S768:w-[95%] m-auto">
         
         <div className="grid S960:grid-cols-2 place-items-center items-center gap-10">
@@ -129,7 +129,7 @@ const For_Him = () => {
                 <div 
                 key={index} >
 
-                  <div className=' bg-neutral-200/95 w-[32rem]  h-[60vh] S600:h-[65vh] S960:h-[70vh] flex item-center justify-center' >
+                  <div className=' bg-neutral-200/95 w-[32rem] h-[60vh] S960:h-[65vh] flex item-center justify-center' >
 
                       <Image src={urlFor(image).url()} unoptimized={true} width={2000} height={2000} priority alt="hero banner" className=" w-72 object-contain cursor-pointer z-50" />
 

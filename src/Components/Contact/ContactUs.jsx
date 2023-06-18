@@ -14,7 +14,7 @@ const ContactUs = () => {
   return (
     <section className=' w-full bg-neutral-100 pb-32'>
         <article className=' w-[90%] S768:w-[95%]  m-auto z-50'>
-          <div className=' hidden S768:flex flex-col items-end justify-end pt-36'>
+          <div className=' hidden S768:flex flex-col items-end justify-end pt-56'>
             <h3 className=' text-[1.4rem] font-bold tracking-wider '>
               Need Assistance?
             </h3>

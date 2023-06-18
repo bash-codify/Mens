@@ -1,9 +1,10 @@
 import React from 'react';
 import { Icon } from '@iconify/react';
+import Link from 'next/link';
 
-const Contact = ({contacttoggle, setContactToggle}) => {
+const Contact = ({contacttoggle, setContactToggle, setMenuToggle}) => {
   return (
-    <div className= {` ${contacttoggle? " translate-x-0 transition-all duration-500 ease-in-out " : ' -translate-x-full transition-all duration-500 ease-in-out '} fixed top-0 left-0 bottom-0 w-[26rem] min-h-screen bg-neutral-200 transition-all duration-500 ease-in-out py-5 overflow-y-scroll `}>
+    <div className= {` ${contacttoggle? " translate-x-0 transition-all duration-500 ease-in-out " : ' -translate-x-full transition-all duration-500 ease-in-out '} fixed top-0 left-0 bottom-0 w-[26rem] S500:w-[35rem] min-h-screen bg-neutral-200 transition-all duration-500 ease-in-out pt-7 pb-16 overflow-y-scroll `}>
      
         <div className=' flex flex-col items-start justify-start px-5 min-h-screen gap-5 '>
 
@@ -31,11 +32,11 @@ const Contact = ({contacttoggle, setContactToggle}) => {
                 <p className=' text-[1.4rem]'>
                     Our Customer Care team is available for any assistance services you may need.
                 </p>
-                <div className=' w-full h-20 bg-black text-white flex item-center justify-center font-bold tracking-wide text-[1.4rem]'>
+                <Link href={'contact-us'} className=' w-full h-20 bg-black text-white flex item-center justify-center font-bold tracking-wide text-[1.4rem]'>
                     <button type='button'>
                         CONTACT US
                     </button>
-                </div>
+                </Link>
             </div>
 
             <div className=' flex flex-col items-start justify-center gap-8 pt-5'>
@@ -51,11 +52,11 @@ const Contact = ({contacttoggle, setContactToggle}) => {
                     Contact us using this link.
                 </p>
 
-                <div className=' w-[23.4rem] h-20 bg-black text-white flex item-center justify-center font-bold tracking-wide text-[1.4rem]'>
+                <Link href={'contact-us'} className=' w-[23.4rem] S500:w-[30.7rem] h-20 bg-black text-white flex item-center justify-center font-bold tracking-wide text-[1.4rem]'>
                     <button type='button '>
-                        SEND EMAIL
+                            SEND EMAIL
                     </button>
-                </div>
+                </Link>
             </div>
 
             <div className=' flex items-start flex-col justify-center gap-8 pt-5'>
@@ -70,11 +71,13 @@ const Contact = ({contacttoggle, setContactToggle}) => {
                 <p className=' text-[1.4rem]'>
                     Book a virtual or in-store shopping Appointments with our skilled advisors.
                 </p>
-                <div className=' w-full h-20 bg-black text-white flex item-center justify-center font-bold tracking-wide text-[1.4rem]'>
+                <Link href={'book-appointment'} className=' w-full h-20 bg-black text-white flex item-center justify-center font-bold tracking-wide text-[1.4rem]'>
+                
                     <button type='button'>
-                       BOOK AN APPOINTMENT
+                        BOOK AN APPOINTMENT
                     </button>
-                </div>
+                    
+                </Link>
             </div>
 
         </div>
