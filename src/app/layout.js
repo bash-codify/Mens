@@ -8,6 +8,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 import NewsLetter from '@/Components/Home/NewsLetter';
 
+
+
 export const metadata = {
   
   title: `Men's`,
@@ -19,9 +21,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Header/>
-
           {children}
- 
         <NewsLetter/>
         <Footer/>
         </body>

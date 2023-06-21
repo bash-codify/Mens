@@ -94,13 +94,13 @@ const HightLight = () => {
                     </h1>
                 </motion.div>
                 <div className=' relative wrapper'>
-                    <motion.div
-                    initial={{ x: "-100%", opacity: 0 }}
-                    whileInView={{x: "0%", opacity: 1 }} 
-                    transition={{ delay: 1, duration: 5,}}
-                    className=' z-40'>
+                    <div className=' z-40'>
                         <div className=' S960:flex items-center gap-10 -z-50'>
-                            <div className=' flex item-center justify-center bg-neutral-200/95 w-full h-[60vh] S500:h-[65vh] S600:h-[80vh] S700:h-[90vh] S960:h-[63vh] S960:w-[90vw] S1200:h-[68vh]'>
+                            <motion.div 
+                            initial={{ x: "-100%", opacity: 0 }}
+                            whileInView={{x: "0%", opacity: 1 }} 
+                            transition={{ delay: 1, duration: 5,}}
+                    className=' flex item-center justify-center bg-neutral-200/95 w-full h-[60vh] S500:h-[65vh] S600:h-[80vh] S700:h-[90vh] S960:h-[63vh] S960:w-[90vw] S1200:h-[68vh]'>
                                 {
                                     selectindex?
                                     <Image src={`${urlFor(data[selectindex].image).url()}`} unoptimized={true} width={2000} height={2000} priority alt="hero banner" className=" w-80 object-contain hover:scale-110 S960:hover:scale-125 transition-all duration-500 ease-linear cursor-pointer" />    
@@ -123,9 +123,13 @@ const HightLight = () => {
 
                                    })
                                 }
-                            </div>
+                            </motion.div>
 
-                            <div className=' w-full'>
+                            <motion.div
+                            initial={{ scale:0, opacity: 0 }}
+                            whileInView={{scale: 1, opacity: 1 }} 
+                            transition={{ duration: 4,}} 
+                            className=' w-full'>
                                 <div className='   font-bold text-[3rem] S960:text-[2rem]'>
                                 {
                                     selectindex? data[selectindex].name 
@@ -177,11 +181,11 @@ const HightLight = () => {
 
                                 }
                                 </div>
-                            </div>
+                            </motion.div>
 
                         </div>
 
-                    </motion.div>
+                    </div>
 
                     <motion.div
                     initial={{ scale: 0, opacity: 0 }}

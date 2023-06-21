@@ -126,7 +126,7 @@ const settings = {
                 NavDotButton.map((dotItem, index)=>{
                   
                   return(
-                    <div className={`${index === current? 'text-white' : 'text-gray-600'}  cursor-pointer`} key={index}>
+                    <div className={`${index === current? 'text-primaryColor' : 'text-gray-600'}  cursor-pointer`} key={index}>
                       <span>
                         {dotItem.icon}
                       </span>

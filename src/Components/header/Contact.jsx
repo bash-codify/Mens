@@ -32,7 +32,7 @@ const Contact = ({contacttoggle, setContactToggle, setMenuToggle}) => {
                 <p className=' text-[1.4rem]'>
                     Our Customer Care team is available for any assistance services you may need.
                 </p>
-                <Link href={'contact-us'} className=' w-full h-20 bg-black text-white flex item-center justify-center font-bold tracking-wide text-[1.4rem]'>
+                <Link href={'contact-us'} className=' w-full h-20 bg-black text-white flex item-center justify-center font-bold tracking-wide text-[1.4rem]'  onClick={()=> setMenuToggle(false)}>
                     <button type='button'>
                         CONTACT US
                     </button>
@@ -52,7 +52,7 @@ const Contact = ({contacttoggle, setContactToggle, setMenuToggle}) => {
                     Contact us using this link.
                 </p>
 
-                <Link href={'contact-us'} className=' w-[23.4rem] S500:w-[30.7rem] h-20 bg-black text-white flex item-center justify-center font-bold tracking-wide text-[1.4rem]'>
+                <Link href={'contact-us'} className=' w-[23.4rem] S500:w-[30.7rem] h-20 bg-black text-white flex item-center justify-center font-bold tracking-wide text-[1.4rem]'  onClick={()=> setMenuToggle(false)}>
                     <button type='button '>
                             SEND EMAIL
                     </button>
@@ -71,7 +71,7 @@ const Contact = ({contacttoggle, setContactToggle, setMenuToggle}) => {
                 <p className=' text-[1.4rem]'>
                     Book a virtual or in-store shopping Appointments with our skilled advisors.
                 </p>
-                <Link href={'book-appointment'} className=' w-full h-20 bg-black text-white flex item-center justify-center font-bold tracking-wide text-[1.4rem]'>
+                <Link href={'book-appointment'} className=' w-full h-20 bg-black text-white flex item-center justify-center font-bold tracking-wide text-[1.4rem]'  onClick={()=> setMenuToggle(false)}>
                 
                     <button type='button'>
                         BOOK AN APPOINTMENT

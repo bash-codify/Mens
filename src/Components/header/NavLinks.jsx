@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
 import { Icon } from '@iconify/react';
 import Contact from './Contact';
-import { useGlobaContext } from '@/context/useContextApi';
+
 import Link from 'next/link';
 
 
 const NavLinks = ({setMenuToggle, setContactToggle, contacttoggle}) => {
-
-    // const { setContactToggle, contacttoggle} = useGlobaContext();
    
 
   return (  
@@ -18,30 +16,30 @@ const NavLinks = ({setMenuToggle, setContactToggle, contacttoggle}) => {
             <div className=' w-[26rem] S500:w-[35rem] min-h-screen bg-white flex items-start justify-start flex-col '>
                 <div className=' w-full h-[5vh] flex items-start flex-col justify-start gap-6 px-10 font-semibold mt-8 tracking-widest'>
                         <div>
-                            <h1 className=' text-[2.8rem] font-semibold hover:text-neutral-400 cursor-pointer'>
+                            <h1 className=' text-[2.8rem] font-semibold hover:text-primaryColor cursor-pointer'>
                                 Men's
                             </h1>
                         </div>
                 </div>
 
                 <div className=' w-full h-[58vh] flex items-start flex-col justify-start gap-6 px-10 text-[2.2rem] font-semibold pt-28 tracking-wider'>
-                    <div className=' hover:text-neutral-400'>
+                    <div className=' hover:text-primaryColor'>
                         <Link href="/" onClick={()=> setMenuToggle(false)}>
                             Home
                         </Link>
                     </div>
-                    <div className=' hover:text-neutral-400'>
+                    <div className=' hover:text-primaryColor'>
                         <a href="#/">
                             Shop
                         </a>
                     </div>
 
-                    <div className=' hover:text-neutral-400'>
+                    <div className=' hover:text-primaryColor'>
                         <a href="#/">
                             About
                         </a>
                     </div>
-                    <div className=' w-full flex items-center justify-between gap-2 cursor-pointer hover:text-neutral-400' onClick={()=> setContactToggle(true)}>
+                    <div className=' w-full flex items-center justify-between gap-2 cursor-pointer hover:text-primaryColor' onClick={()=> setContactToggle(true)}>
                         
                         <span>
                             Contact Us
@@ -55,9 +53,9 @@ const NavLinks = ({setMenuToggle, setContactToggle, contacttoggle}) => {
 
                 <div className=' w-[26rem] S500:w-[35rem] h-[42vh] bg-gray-300 flex items-start justify-center flex-col gap-6 text-[2.2rem] px-10 tracking-wider'>
 
-                    <Link href={'my-account'}>
+                    <Link href={'my-account'}  onClick={()=> setMenuToggle(false)}>
 
-                        <div className=' flex items-center justify-start gap-4 cursor-pointer hover:text-neutral-400 '>
+                        <div className=' flex items-center justify-start gap-4 cursor-pointer hover:text-primaryColor '>
                             <span>
                                 
                                 <Icon icon="clarity:user-line" />
@@ -68,8 +66,8 @@ const NavLinks = ({setMenuToggle, setContactToggle, contacttoggle}) => {
                         </div>
                     </Link>
 
-                    <Link href={'find-a-store'}>
-                        <div className=' flex items-center justify-start gap-4 cursor-pointer hover:text-neutral-400 '>
+                    <Link href={'find-a-store'}  onClick={()=> setMenuToggle(false)}>
+                        <div className=' flex items-center justify-start gap-4 cursor-pointer hover:text-primaryColor '>
                             
                             <span>
                                 <Icon icon="material-symbols:location-on-outline" />
@@ -83,9 +81,9 @@ const NavLinks = ({setMenuToggle, setContactToggle, contacttoggle}) => {
                     </Link>
 
 
-                    <Link href={''}>
+                    <Link href={''}  onClick={()=> setMenuToggle(false)}>
 
-                        <div className=' flex items-center justify-start gap-4 cursor-pointer hover:text-neutral-400 '>
+                        <div className=' flex items-center justify-start gap-4 cursor-pointer hover:text-primaryColor '>
                             <span >
                                 <Icon icon="streamline:interface-favorite-heart-reward-social-rating-media-heart-it-like-favorite-love" />
                             </span>
