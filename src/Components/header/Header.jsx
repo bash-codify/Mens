@@ -4,6 +4,8 @@ import { Icon } from '@iconify/react';
 import NavLinks from './NavLinks';
 import Cart from '../cartbag/Cart';
 import { CartToggleOpen, CartToggleStore } from '../globalstore/Store';
+import Link from 'next/link';
+import Search from './Search';
 
 
 
@@ -12,6 +14,7 @@ const Header = () => {
     const [menutoggle, setMenuToggle] = useState(false);
      const [contacttoggle, setContactToggle] = useState(false);
      const [isopen, setIsOpen] = useState(false)
+     const [issearch, setIsSearch] = useState(false)
     
      
 
@@ -36,11 +39,11 @@ const Header = () => {
                         } }>
                         <Icon icon="clarity:menu-line" />
                         </div>
-                        <div>
+                        <Link href={'/'}>
                             <h1 className=' text-[2.6rem] font-semibold tracking-widest hover:text-primaryColor cursor-pointer'>
                                 Men's
                             </h1>
-                        </div>
+                        </Link>
                     </div>
 
                     <div className=' flex items-center justify-center gap-5 text-[2rem] '>
@@ -51,11 +54,11 @@ const Header = () => {
 
                         </div>
 
-                        <div className=' cursor-pointer hover:text-primaryColor' onMouseOver={() => setIsOpen(true)}  >
+                        <Link href={'bag'} className=' cursor-pointer hover:text-primaryColor' onMouseOver={() => setIsOpen(true)} >
 
                             <Icon icon="akar-icons:shopping-bag" />
                             
-                        </div>
+                        </Link>
                     </div>
                 </div>
             </nav>
@@ -73,6 +76,15 @@ const Header = () => {
             <Cart isopen={isopen} setIsOpen={setIsOpen}/>
         </div>
         {/* End of Cart Section */}
+
+        {/* Search Section */}
+        <div>
+            {
+                issearch &&
+            <Search issearch={issearch} setIsSearch={setIsSearch}/>
+            }
+        </div>
+        {/* End of Search Section */}
     </header>
   )
 }
